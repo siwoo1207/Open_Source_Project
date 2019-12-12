@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MOVIE</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    
+<body>
+    <br>
+    <h1>🎬 MOVIE RECOMMENDATION 🎬</h1>
+    <form action='./login.php' name='login' method='post'>
+        <div class="login-box">
+            <h1>L O G I N</h1><br>
+            <ul>
+                <label>아이디</label><br>
+                <input type="text" name="id" class="box"/><br><br>
+
+                <label>비밀번호</label><br>
+                <input type="password" name="pwd" class="box"/>
+                <br><br><br>
+
+                <input type="submit" value="로그인" style="cursor: pointer"/><br><br>
+                
+                <br><a href="join.html" title="join" style="cursor: pointer;">회원가입</a>
+            </ul>
+            
+        </div>
+    </form>
+</body>
+</html>
+
+<style>
+    @font-face
+    {
+        font-family: bmjua; 
+        src:url(BMJUA_ttf.ttf);
+    }
+    body
+    {
+        background-color: gainsboro;
+        font-family: bmjua;
+    }
+    
+    h1
+    {
+        text-align: center;
+    }
+    
+    input
+    {
+        border-radius: 10px;
+        width: 220px;
+        height: 30px;
+    }
+    
+    div
+    {
+        background-color: gray;
+        margin: 75px 565px;
+        border-radius: 20px;
+        padding: 55px 40px 40px;
+        width: 300px;
+        height: 420px;
+        box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+    }
+</style>

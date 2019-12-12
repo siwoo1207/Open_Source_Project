@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FEEDBACK</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    
+<body>
+    <br>
+    <h1>FEEDBACK</h1>
+    <form method="POST" action='./feedback_insert.php'>
+        <div class="login-box">
+            <fieldset>
+                <legend>이 사이트에 대해 얼만큼 만족하나요?</legend>
+                <span id="perce">0%</span><input type="range" name="satisfaction" min="0" max="100" value="50" style="margin: 0px 43px"><span id="perce">100%</span><br>
+            </fieldset><br><br>
+
+            <p><strong> 개선이 필요한 부분을 적어주세요! </strong><br><br>
+                <textarea name="comments" rows="20" cols="40" style="border-radius:15px; opacity:0.5"></textarea> 
+            </p>
+            
+            <br>
+            <input type="submit" value="확인" style="margin: 0px 100px; border-radius: 10px; width: 100px; height: 30px; cursor: pointer"/>
+        </div>
+    </form>
+</body>
+</html>
+
+
+<style>
+    @font-face
+    {
+        font-family: bmjua; 
+        src:url(BMJUA_ttf.ttf);
+    }
+    body
+    {
+        background-color: gainsboro;
+        font-family: bmjua;
+    }
+    
+    h1
+    {
+        text-align: center;
+    }
+    
+    legend
+    {
+        text-align: center;
+    }
+    
+    strong
+    {
+        margin: 0px 20px;
+    }
+    
+    div
+    {
+        background-color: gray;
+        margin: 75px 565px;
+        border-radius: 20px;
+        padding: 55px 40px 40px;
+        width: 310px;
+        height: 550px;
+        box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+    }
+</style>

@@ -1,0 +1,144 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<html>   
+<head>
+    <title>JOIN</title>
+</head>
+    
+<script>
+    function count_ck(obj)
+    {
+	var chkbox = document.getElementsByName("chk");
+	var chkCnt = 0;
+        
+	for(var i=0; i<chkbox.length; i++)
+    {
+		if(chkbox[i].checked)
+        {
+			chkCnt++;
+		}
+	}
+
+	if(chkCnt>2)
+    {
+		alert("3개까지만 선택 가능합니다!");
+		obj.checked = false;
+		return false;
+	}
+}
+</script>
+    
+<body>
+    <br>
+    <h1 class="join-tittle">🔒 SIGN UP 🔒</h1>
+    <form action='./join_action.php' name='reg' method='post'><br><br>
+        <div class="login-box">
+            <fieldset>
+                <legend><h2>개 인 정 보</h2></legend>
+                <label>아이디</label><br>
+                <input type="text" name="u_id" class="box" required style="border-radius: 8px; width: 200px; height: 25px; margin: 0px 10px"/><br><br>
+
+                <label>비밀번호</label><br>
+                <input type="password" name="u_pwd" class="box" required style="border-radius: 8px; width: 200px; height: 25px; margin: 0px 10px"/><br><br>
+
+                <label>이름</label><br>
+                <input type="text" name="u_name" class="box" required style="border-radius: 8px; width: 200px; height: 25px; margin: 0px 10px"/><br><br>
+
+                <label>나이</label><br>
+                <input type="text" name="u_age" class="box" required style="border-radius: 8px; width: 200px; height: 25px; margin: 0px 10px"/><br><br>
+
+                <label>성별</label><br>
+                <input type="radio" name="u_sex" id="male" value="M" style="margin: 0px 15px 30px; width: 20px; height: 18px"><label for=male>남성</label>
+                <input type="radio" name="u_sex" id="female" value="F" style="margin: 0px 15px 30px; width: 20px; height: 18px"><label for="female">여성</label>
+            </fieldset>
+
+            <fieldset>
+                <legend><h2>영 화 취 향</h2></legend>
+                <p><strong>관람 포인트(3개 선택)</strong><br><br>
+                    <input type="checkbox" name="point[]" value="0" style="width: 20px; height: 18px; margin: 0px 10px;"/>연출
+                    <input type="checkbox" name="point[]" value="1" style="width: 20px; height: 18px; margin: 0px 10px;"/>연기
+                    <input type="checkbox" name="point[]" value="2" style="width: 20px; height: 18px; margin: 0px 10px;"/>스토리
+                    <input type="checkbox" name="point[]" value="3" style="width: 20px; height: 18px; margin: 0px 10px;"/>영상미
+                    <input type="checkbox" name="point[]" value="4" style="width: 20px; height: 18px; margin: 0px 10px;"/>OST
+                </p><br><br><br>
+
+                <p><strong>선호 장르(3개 선택)</strong><br><br>
+                    <input type="checkbox" name="prefer[]" value="drama" style="width: 20px; height: 18px; margin: 0px 10px;"/>드라마
+                    <input type="checkbox" name="prefer[]" value="fantasy" style="width: 20px; height: 18px; margin: 0px 10px;"/>판타지
+                    <input type="checkbox" name="prefer[]" value="subu" style="width: 20px; height: 18px; margin: 0px 10px;"/>서부
+                    <input type="checkbox" name="prefer[]" value="horror" style="width: 20px; height: 18px; margin: 0px 10px;" style="width: 20px; height: 18px; margin: 0px 10px;"/>공포
+                    <input type="checkbox" name="prefer[]" value="romance" style="width: 20px; height: 18px; margin: 0px 10px;"/>멜로/로맨스
+                    <input type="checkbox" name="prefer[]" value="adventure" style="width: 20px; height: 18px; margin: 0px 10px;"/>모험<br><br><br>
+                    <input type="checkbox" name="prefer[]" value="thriller" style="width: 20px; height: 18px; margin: 0px 10px;"/>스릴러
+                    <input type="checkbox" name="prefer[]" value="noir" style="width: 20px; height: 18px; margin: 0px 10px;"/>느와르
+                    <input type="checkbox" name="prefer[]" value="cult" style="width: 20px; height: 18px; margin: 0px 10px;"/>컬트
+                    <input type="checkbox" name="prefer[]" value="dacu" style="width: 20px; height: 18px; margin: 0px 10px;"/>다큐맨터리
+                    <input type="checkbox" name="prefer[]" value="comic" style="width: 20px; height: 18px; margin: 0px 10px;"/>코미디
+                    <input type="checkbox" name="prefer[]" value="family" style="width: 20px; height: 18px; margin: 0px 10px;"/>가족<br><br><br>
+                    <input type="checkbox" name="prefer[]" value="mystery" style="width: 20px; height: 18px; margin: 0px 10px;"/>미스터리
+                    <input type="checkbox" name="prefer[]" value="war" style="width: 20px; height: 18px; margin: 0px 10px;"/>전쟁
+                    <input type="checkbox" name="prefer[]" value="ani" style="width: 20px; height: 18px; margin: 0px 10px;"/>애니메이션
+                    <input type="checkbox" name="prefer[]" value="crime" style="width: 20px; height: 18px; margin: 0px 10px;"/>범죄
+                    <input type="checkbox" name="prefer[]" value="musical" style="width: 20px; height: 18px; margin: 0px 10px;"/>뮤지컬
+                    <input type="checkbox" name="prefer[]" value="sf" style="width: 20px; height: 18px; margin: 0px 10px;"/>SF<br><br><br>
+                    <input type="checkbox" name="prefer[]" value="heroism" style="width: 20px; height: 18px; margin: 0px 10px;"/>무협
+                    <input type="checkbox" name="prefer[]" value="ero" style="width: 20px; height: 18px; margin: 0px 10px;"/>에로
+                    <input type="checkbox" name="prefer[]" value="suspense" style="width: 20px; height: 18px; margin: 0px 10px;"/>서스펜스
+                    <input type="checkbox" name="prefer[]" value="narration" style="width: 20px; height: 18px; margin: 0px 10px;"/>서사
+                    <input type="checkbox" name="prefer[]" value="blackcomic" style="width: 20px; height: 18px; margin: 0px 10px;"/>블랙코미디
+                    <input type="checkbox" name="prefer[]" value="experiment" style="width: 20px; height: 18px; margin: 0px 10px;"/>실험
+                </p><br>
+
+            </fieldset>
+            <br><br><input type="submit" value="회원가입" style="margin: 0px 250px; border-radius: 8px; width: 90px; height: 30px; cursor: pointer"/><br>
+        </div>
+    </form>
+</body>
+    
+</html>
+
+<style>
+    @font-face
+    {
+        font-family: bmjua; 
+        src:url(BMJUA_ttf.ttf);
+    }
+    body
+    {
+        background-color: gainsboro;
+        font-family: bmjua;
+    }
+    
+    h1
+    {
+        text-align: center;
+    }
+    
+    strong
+    {
+        font-size: 18px;
+        margin: 0px 10px;
+    }
+    
+    label
+    {
+        margin: 0px 10px;
+    }
+    
+    legend
+    {
+        margin: 0px 10px;
+        text-align: center;
+    }
+    
+    div
+    {
+        background-color: gray;
+        margin: 10px 410px;
+        border-radius: 20px;
+        padding: 55px 40px 40px;
+        width: 600px;
+        height: 1050px;
+        box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+    }
+</style>
